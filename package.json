@@ -11,6 +11,7 @@
     "funnies": "^2.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-player": "^2.8.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-spring": "^8.0.27",

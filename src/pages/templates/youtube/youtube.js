@@ -1,7 +1,8 @@
 import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
-import {Button} from "@material-ui/core";
+import {Button , Card} from "@material-ui/core";
+import ReactPlayer from 'react-player'
 
 
 
@@ -74,6 +75,8 @@ export  default function Youtube(){
         var mainData = data.slice(1,len);
     return (
       < >
+            <div className="main-grid">
+
       <div className="main-div">
         
       <h1 className="main-text">
@@ -86,19 +89,23 @@ export  default function Youtube(){
           <img src={YoutubeImage} className="main-image" alt="Youtube"></img>
       </div>
       </div>
-
+     <div className="video-Grid">
 {
     mainData.map(
         x =>
         <>
-    <h3> {x["title"].$t}</h3>
-     
-     <a href={clearLink(x["content"].$t)}><Button> {clearLink(x["content"].$t)} </Button> </a>
+        <div className="card">
+    <ReactPlayer url={clearLink(x["content"].$t)} controls={true} className="videoPlayer" width="100%"/>
+    <h3 className="videoTitle"> {x["title"].$t}</h3>
+
+  
+     </div>
     </>
         
     )
 }
-        
+        </div>
+        </div>
      </>
       
 
