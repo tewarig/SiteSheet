@@ -3,6 +3,13 @@ import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
 import {Button} from "@material-ui/core";
 
+
+
+import './youtube.css';
+import YoutubeImage from '../../../assets/youtube.png' ;
+
+
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -56,7 +63,7 @@ export  default function Youtube(){
     {
         return(
     <>
-  <Loading/>
+  <Loading color={'#0000'}/>
 
     </>
 
@@ -66,13 +73,19 @@ export  default function Youtube(){
         var len = data.length;
         var mainData = data.slice(1,len);
     return (
-      <div>
-      <h1>
+      < >
+      <div className="main-div">
+        
+      <h1 className="main-text">
         {data[0].title["$t"]}
       </h1>
-      <h3>
+      <h3 className="main-subText">
         {  clearText(data[0].content["$t"])}
       </h3>
+      <div className="image">
+          <img src={YoutubeImage} className="main-image" alt="Youtube"></img>
+      </div>
+      </div>
 
 {
     mainData.map(
@@ -86,7 +99,9 @@ export  default function Youtube(){
     )
 }
         
-      </div>
+     </>
+      
+
     );
     }
 };

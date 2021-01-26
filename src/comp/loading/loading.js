@@ -6,7 +6,7 @@ import Funnies from 'funnies';
 
 
 
-function Loading() {
+function Loading({color}) {
   let funnies = new Funnies();
 
   return (
@@ -16,7 +16,7 @@ function Loading() {
    
    <h1>
      {funnies.message()} <br/>
-   <div className="loading">  <CircularProgress color={'#000'}  /> </div>
+   <div className="loading">  <CircularProgress color={color}  /> </div>
    </h1>
    </div>
   
