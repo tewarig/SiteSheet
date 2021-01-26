@@ -1,6 +1,6 @@
 import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
-import Loading from "../templates/profile";
+import Loading from '../../comp/loading/loading';
 
 import {
     BrowserRouter as Router,
@@ -33,7 +33,11 @@ export  default function Profile(){
     if(!data)
     {
         return(
-     <Loading/>         
+    <>
+  <Loading/>
+
+    </>
+
           
         );
     }else{
