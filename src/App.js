@@ -10,6 +10,8 @@ import Profile from './pages/templates/profile';
 import Home  from './pages/home';
 import Api from './pages/api/api';
 import Youtube from './pages/templates/youtube/youtube';
+import Table from './pages/templates/bigTable/table';
+
 function App() {
   return (
     <>
@@ -25,6 +27,7 @@ function App() {
              </Route> 
           <Route path="/profile/:id" children={<Profile />} />
           <Route path="/youtube/:id" children={<Youtube />} />
+          <Route path="/table/:id" children={<Table/>} />
 
         </Switch>
       </div>
