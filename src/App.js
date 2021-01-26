@@ -9,7 +9,7 @@ import {
 import Profile from './pages/templates/profile';
 import Home  from './pages/home';
 import Api from './pages/api/api';
-
+import Youtube from './pages/templates/youtube/youtube';
 function App() {
   return (
     <>
@@ -24,6 +24,8 @@ function App() {
               <Api/>
              </Route> 
           <Route path="/profile/:id" children={<Profile />} />
+          <Route path="/youtube/:id" children={<Youtube />} />
+
         </Switch>
       </div>
     </Router>
