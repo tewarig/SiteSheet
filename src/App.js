@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Profile from './pages/templates/profile';
 import Home  from './pages/home';
+import Api from './pages/api/api';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
            <Route exact path="/" >
               <Home/>
+             </Route> 
+             <Route exact path="/api" >
+              <Api/>
              </Route> 
           <Route path="/profile/:id" children={<Profile />} />
         </Switch>
