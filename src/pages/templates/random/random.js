@@ -8,6 +8,7 @@ import Confetti from 'react-confetti'
 
 
 import './random.css';
+import WinnerImage from '../../../assets/winner.png' ;
 
 
 
@@ -26,22 +27,7 @@ export  default function Random(){
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-     const clearLink = (link) => {
-        var j = 0;
-        while(link[j] !== 'h')
-        {
-            j++;
-        }
-        var temp = link.length;
-         var newLink = link.slice(j,temp);
-        return newLink;
-      
-    };
-    const clearText = (text) => {
-        var temp = text.length;
-       var newText = text.slice(6,temp);
-       return newText;
-    };
+  
     let { id } = useParams();
     const [data,setData] = useState(null);
 
@@ -75,10 +61,12 @@ export  default function Random(){
         );
     }else{
         var len = data.length;
-        var ran =   getRandomInt(0,len+1) ;
+        var ran =   getRandomInt(0,len) ;
         var randomWinner = data[ran];   
         const name= randomWinner['title']["$t"]; 
         const email = randomWinner['content']["$t"];
+        var len = email.length;
+        const mainMail = email.slice(7,len);
 
       return (
      <>
@@ -86,8 +74,13 @@ export  default function Random(){
       width={width}
       height={height}
     />
-     <h1>{name}</h1>
-      <h3>{email}</h3>
+              <img src={WinnerImage} className="main-image" alt="WinnerImage"></img>
+
+    <div className="centered-this">
+        <h3 className="talor">The winner is 🏆 </h3> <br/>
+     <h1 className="talor text">{name}</h1> <br/>
+      <span className="talor">{mainMail}</span>
+    </div>
      </>
       
 

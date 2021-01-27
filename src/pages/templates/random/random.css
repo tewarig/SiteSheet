@@ -1,0 +1,32 @@
+.centered-this {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+
+.talor {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.text {
+  font-size: 60px;
+}
+.main-image {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .main-image {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+  }
+}
