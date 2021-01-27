@@ -1,8 +1,9 @@
 import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
-import {Button , Card} from "@material-ui/core";
-import ReactPlayer from 'react-player'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+
 
 
 
@@ -17,11 +18,14 @@ import {
 
 
 export  default function Random(){
+    const { width, height } = useWindowSize()
+
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
      const clearLink = (link) => {
         var j = 0;
         while(link[j] !== 'h')
@@ -40,7 +44,6 @@ export  default function Random(){
     };
     let { id } = useParams();
     const [data,setData] = useState(null);
-    const [sheetData,setSheetData] = useState(null);
 
     const fetchData = async () => {
         try{
@@ -73,11 +76,18 @@ export  default function Random(){
     }else{
         var len = data.length;
         var ran =   getRandomInt(0,len+1) ;
-        
-        console.log(data[ran]);
-    return (
+        var randomWinner = data[ran];   
+        const name= randomWinner['title']["$t"]; 
+        const email = randomWinner['content']["$t"];
+
+      return (
      <>
-     Random page
+     <Confetti
+      width={width}
+      height={height}
+    />
+     <h1>{name}</h1>
+      <h3>{email}</h3>
      </>
       
 
