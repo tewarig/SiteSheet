@@ -12,6 +12,7 @@ import Api from './pages/api/api';
 import Youtube from './pages/templates/youtube/youtube';
 import Table from './pages/templates/bigTable/table';
 import Random from './pages/templates/random/random';
+import Cafe from './pages/templates/cafe/cafe';
 
 function App() {
   return (
