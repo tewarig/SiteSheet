@@ -11,6 +11,7 @@ import Home  from './pages/home';
 import Api from './pages/api/api';
 import Youtube from './pages/templates/youtube/youtube';
 import Table from './pages/templates/bigTable/table';
+import Random from './pages/templates/random/random';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           <Route path="/profile/:id" children={<Profile />} />
           <Route path="/youtube/:id" children={<Youtube />} />
           <Route path="/table/:id" children={<Table/>} />
+          <Route path="/table/:id" children={<Table/>} />
+          <Route path="/random/:id" children={<Random/>} />
+
 
         </Switch>
       </div>

@@ -12,14 +12,16 @@ import './random.css';
 
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams
+        useParams
   } from "react-router-dom";
 
 
-export  default function Youtube(){
+export  default function Random(){
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
      const clearLink = (link) => {
         var j = 0;
         while(link[j] !== 'h')
@@ -70,7 +72,9 @@ export  default function Youtube(){
         );
     }else{
         var len = data.length;
-        var mainData = data.slice(1,len);
+        var ran =   getRandomInt(0,len+1) ;
+        
+        console.log(data[ran]);
     return (
      <>
      Random page
