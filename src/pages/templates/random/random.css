@@ -15,7 +15,7 @@
 .text {
   font-size: 60px;
 }
-.main-image {
+.main-image-hero {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 600px) {
-  .main-image {
+  .main-image-hero {
     position: absolute;
     height: 50%;
     width: 100%;

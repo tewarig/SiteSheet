@@ -74,7 +74,7 @@ export  default function Random(){
       width={width}
       height={height}
     />
-              <img src={WinnerImage} className="main-image" alt="WinnerImage"></img>
+              <img src={WinnerImage} className="main-image-hero" alt="WinnerImage"></img>
 
     <div className="centered-this">
         <h3 className="talor">The winner is 🏆 </h3> <br/>
