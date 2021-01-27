@@ -2,21 +2,24 @@ import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
 import ReactPlayer from 'react-player'
-
+import  { Button }from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 
 import './cafe.css';
-
+import Coffe from '../../../assets/coffee.svg';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 
 import {
-    BrowserRouter as Router,
-   
+    BrowserRouter as Router,   
     useParams
   } from "react-router-dom";
+import { PhoneInTalk } from "@material-ui/icons";
 
 
-export  default function cafe(){
+export  default function Cafe(){
      const clearLink = (link) => {
         var j = 0;
         while(link[j] !== 'h')
@@ -71,7 +74,36 @@ export  default function cafe(){
         var mainData = data.slice(1,len);
     return (
       < >
-      This is cafe comp
+      <img className="hero-img" src={Coffe}  width="60%" height="100%"/>
+    
+     <div className="social-bar">
+       <div className="bar-line">
+       </div>
+      <a>
+      <Button>
+       <PhoneIcon fontSize="large" />
+     
+      </Button>
+      </a>
+      <a>
+      <Button>
+          
+       <FacebookIcon fontSize="large" />
+       
+      </Button>
+      </a>
+       
+      <a>
+      <Button>
+       <TwitterIcon fontSize="large" />
+     
+      </Button>
+      </a>
+      
+      </div>
+      <div className="bottom">
+          <div className="bar-line"></div>
+      </div>
      </>
     );
     }

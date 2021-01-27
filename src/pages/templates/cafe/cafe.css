@@ -1,0 +1,26 @@
+.hero-img {
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+/* .fb-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+} */
+.social-bar {
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bar-line {
+  width: 100%;
+  height: 0.5rem;
+  background: #000000;
+}
+.bottom {
+  bottom: 1;
+  position: absolute;
+}

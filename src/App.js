@@ -32,6 +32,7 @@ function App() {
           <Route path="/table/:id" children={<Table/>} />
           <Route path="/table/:id" children={<Table/>} />
           <Route path="/random/:id" children={<Random/>} />
+          <Route path="/cafe/:id" children={<Cafe/>} />
 
 
         </Switch>
