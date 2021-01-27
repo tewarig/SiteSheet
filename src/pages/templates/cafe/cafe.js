@@ -20,41 +20,29 @@ import { PhoneInTalk } from "@material-ui/icons";
 
 
 export  default function Cafe(){
-     const clearLink = (link) => {
-        var j = 0;
-        while(link[j] !== 'h')
-        {
-            j++;
-        }
-        var temp = link.length;
-         var newLink = link.slice(j,temp);
-        // console.log(newLink);
-        return newLink;
-      
-    };
+   
     const clearText = (text) => {
         var temp = text.length;
-       var newText = text.slice(6,temp);
+       var newText = text.slice(8,temp);
        return newText;
     };
     let { id } = useParams();
     const [data,setData] = useState(null);
-    const [sheetData,setSheetData] = useState(null);
 
     const fetchData = async () => {
-        try{
-            // console.log(id);
-         const {data} = await  Axios.get('https://spreadsheets.google.com/feeds/list/'+id +'/od6/public/basic?alt=json') ;
-         const details = data;
-         setData(details["feed"].entry);
-                          
-        
+      try{
+          // console.log(id);
+       const {data} = await  Axios.get('https://spreadsheets.google.com/feeds/list/'+id +'/od6/public/basic?alt=json') ;
+       const details = data;
+       setData(details);
+                        
+       console.log(data);
 
-        } catch(error){
-             console.warn(error);
-        }
-        
-      };
+      } catch(error){
+           console.warn(error);
+      }
+      
+    };
       useEffect(()=>{
         fetchData();
       }, [] );
@@ -70,11 +58,16 @@ export  default function Cafe(){
           
         );
     }else{
-        var len = data.length;
-        var mainData = data.slice(1,len);
+     var cafeName = data["feed"].entry[0]["content"]['$t'];
+     var cafeTagline = data["feed"].entry[1]["content"]['$t'];
+
     return (
       < >
+      <div>
       <img className="hero-img" src={Coffe}  width="60%" height="100%"/>
+      {clearText(cafeName)} <br/>  
+      {clearText(cafeTagline)}
+        </div>
     
      <div className="social-bar">
        <div className="bar-line">
