@@ -7,10 +7,14 @@ import {
   useParams
 } from "react-router-dom";
 
+
+
+import Header from '../comp/Header/header';
+
 function Home() {
   return (
     <>
-   <h1>This is home page</h1>
+    <Header mainHeader="main Header" anotherHeader="anotherHeader" dis="dis" mainAction="mainAction" secondaryAction="secaction" />
     </>
   );
 }
