@@ -37,6 +37,7 @@
   top: 45%;
   font-weight: bold;
 }
+
 .intro-blankSpace {
   height: "30%";
 }
@@ -44,4 +45,12 @@
   margin-left: "50%";
   height: 100%;
   position: relative;
+}
+.intro-button-text {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  text-decoration: #47ff8c;
+}
+a:link {
+  text-decoration: none;
 }
