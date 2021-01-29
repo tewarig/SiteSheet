@@ -7,13 +7,13 @@ import {
   useParams,
 } from "react-router-dom";
 
-import Header from "../comp/Header/header";
-import Feature from "../comp/feature-list/feature";
-import Contact from "../comp/contact/contact";
-import DivLine from "../comp/div-line/divLine";
+
+import Intro from '../comp/Intro/intro';
 
 function Home() {
-  return <>this is home page</>;
+  return <>
+   <Intro/>
+  </>;
 }
 
 export default Home;
