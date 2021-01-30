@@ -12,7 +12,7 @@
   height: 50%;
 }
 .banner-text {
-  color: #47ff8c;
+  color: #86e0a8;
   font-weight: 600;
   align-self: center;
   font-size: 50px;
@@ -31,9 +31,9 @@
     height: 50%;
   }
   .banner-text {
-    color: #47ff8c;
+    color: #86e0a8;
     font-weight: 600;
     align-self: center;
-    font-size: 30px;
+    font-size: 0px;
   }
 }
