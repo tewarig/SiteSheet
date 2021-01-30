@@ -1,6 +1,8 @@
 .footer {
-  background-color: #b6b2b2;
+  background-color: #646262;
   color: #ffffff;
   align-items: center;
   text-align: center;
+  /* border-top: 2px solid #47ff8c; */
+  color: #47ff8c;
 }
