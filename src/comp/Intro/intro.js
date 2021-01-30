@@ -10,7 +10,7 @@ import {
     
   } from "react-router-dom";
 
-function Intro() {
+function Intro({}) {
 
   return (
     <>
@@ -66,11 +66,11 @@ function Intro() {
         }}
         ><h3 className="intro-button-text">Convert into Website</h3></Button> 
         </h3>
-        <h3 className="intro-h3">
+        <h2 className="intro-h3">
            Convert Google Sheets into
-        </h3>
+        </h2>
        <h1 className="intro-h1">
-           Sheet Site
+           Site Sheet
       
 
         </h1>
