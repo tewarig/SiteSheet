@@ -9,7 +9,7 @@ function Footer() {
     <div className="footer">
    
    
-    
+    Gaurav Tewari
 
     
 

@@ -10,11 +10,13 @@ import {
 
 import Intro from '../comp/Intro/intro';
 import Feature from '../comp/intro-feature/feature';
+import Footer from '../comp/footer/footer';
 
 function Home() {
   return <>
    <Intro/>
    <Feature />
+   <Footer/>
   </>;
 }
 
