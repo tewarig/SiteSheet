@@ -9,10 +9,12 @@ import {
 
 
 import Intro from '../comp/Intro/intro';
+import Feature from '../comp/intro-feature/feature';
 
 function Home() {
   return <>
    <Intro/>
+   <Feature />
   </>;
 }
 

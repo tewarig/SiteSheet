@@ -1,0 +1,49 @@
+.intro-video-Grid {
+  padding-top: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-bottom: 5%;
+
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.intro-card {
+  height: 350px;
+  border-radius: 30px;
+  border: 2px solid #47ff8c;
+  background-color: #fdfdfd;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-feature-comp {
+  background-color: #f0f0f0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.intro-svg-icon {
+  transform: scale(3);
+  color: #47ff8c;
+  margin-top: 20%;
+}
+.intro-heading {
+  color: #47ff8c;
+  margin-left: 2%;
+  align-self: center;
+}
+.intro-des {
+  color: #706e6e;
+  margin-left: 2%;
+}
+@media (max-width: 600px) {
+  .intro-video-Grid {
+    padding-top: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
