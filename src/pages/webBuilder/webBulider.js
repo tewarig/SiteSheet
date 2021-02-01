@@ -38,7 +38,7 @@ function WebBulider() {
  
   var [url ,setUrl ] = useState(null);
   var [apiUrl , setApiUrl] = useState(null);
-
+  var [chooseTemplate ,setChooseTemplate] = useState(true);
   const getUrl = (e)  => {
     var data =  e.target.value;
     setUrl(data);
@@ -65,7 +65,7 @@ function WebBulider() {
       }
       var uniqueID = url.slice(39,i);
       console.log(uniqueID);
-      var temp = 'https://spreadsheets.google.com/feeds/list/' + uniqueID + '/od6/public/basic?alt=json ';
+      var temp = 'https://sitesheet.vercel.app' + uniqueID + '/od6/public/basic?alt=json ';
       setApiUrl(temp);
 
 
@@ -87,79 +87,23 @@ function WebBulider() {
 
 
   return (
-    <div className="api-back">
-     <div className="api-details">
-     <h1 className="api-heading">Convert your Google sheet into a Website.</h1>
-     <div className="api-dis">
-   { !apiUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 
-   
-    
-     <TextField 
-      label="Enter Url"
-      variant="outlined"
-      fullWidth
-      onChange={getUrl}
-      style={{
-        color: '#47ff8c',
-
-      }}
-      className={classes.textField}
-
-  
-
-     >
-       </TextField>
-     <Button 
-     style={{            
-      backgroundColor: "#787c7a",
-      color:"#47ff8c",     
-      borderColor: "#787c7a",
-      textDecoration: false,
-      marginLeft: '1%',
-    
-       
-
-  }}
-     onClick={checkUrl} > <div className="api-button-text">GO</div></Button>
-    </>
-  }  <div>
-     <ToastContainer />
-
-    </div>
-    { apiUrl &&<> 
-      <span className="api-dis-text"> This is your api end point copy it and use it in your web application.</span> 
-    <TextField    
-      variant="outlined"
-      fullWidth
-      defaultValue={apiUrl}
-      style={{
-        color: '#47ff8c',
-
-      }}
-      className={classes.textField}
-
-  
-
-     />
-    
-    <Button 
-     style={{            
-      backgroundColor: "#787c7a",
-      color:"#47ff8c",     
-      borderColor: "#787c7a",
-      textDecoration: false,
-      marginLeft: '1%',
-    
-       
-
-  }}
-     onClick={copyCodeToClipboard} > <div className="api-button-text"> <FileCopyIcon /> </div></Button>
-     </>}
-    </div>
-    </div>
-
-    <img src={WebImage}  className="web-image"/>
-    </div>
+  <div>
+    <div className="web-intro">
+       <h1 className="web-intro-heading"> Convert your google sheet into website  </h1>   
+       <h3 className="web-intro-dis"> Choose your next website from these templates.</h3>
+     </div>
+    {chooseTemplate && <>
+     yo please choose template.
+     <button  onClick={() => (setChooseTemplate(!chooseTemplate))}>
+   yo
+     </button>
+    </>}
+    {
+      !chooseTemplate && <>
+      yo this is url window.
+      </>
+    }
+  </div>
   );
 }
 

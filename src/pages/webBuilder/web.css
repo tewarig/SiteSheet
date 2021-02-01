@@ -1,19 +1,23 @@
-.web-image {
-  right: 0px;
-  bottom: 0px;
-  height: 90%;
-  width: 30%;
-  margin-top: 20%;
-  margin-left: 70%;
+.web-intro {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+.web-intro-heading {
+  margin-left: 3%;
+  color: #47ff8c;
+}
+.web-intro-dis {
+  margin-left: 3%;
+  color: #8f8b8b;
+  margin-block-start: 0em;
 }
 
 @media (max-width: 600px) {
-  .web-image {
-    right: 0px;
-    bottom: 0px;
-    height: 100%;
-    width: 100%;
-    margin-left: 0px;
-    margin-top: 150%;
+  .web-intro-heading {
+    margin-left: 3%;
+  }
+  .web-intro-dis {
+    margin-left: 3%;
   }
 }
