@@ -33,6 +33,9 @@ h1 {
   color: #8f8f8f;
   font-size: 25px;
 }
+.web-choose-temp {
+  padding-top: 5%;
+}
 .web-img {
   height: 50%;
   width: 50%;
@@ -41,11 +44,15 @@ h1 {
 }
 .web-intro-dis {
   margin-left: 3%;
-  color: #8f8b8b;
+  margin-top: 2%;
+  color: #47ff8c;
+  font-size: 25px;
+  margin-block-end: 0em;
   margin-block-start: 0em;
+  top: 3%;
 }
 .web-choose-template {
-  background-color: #f3f7eb;
+  background-color: #f3f0f0;
 }
 .web-card-text {
   color: #b4493d;
@@ -65,8 +72,8 @@ h1 {
   height: 500px;
   border-radius: 20px;
   border: 2px solid #8f8f8f;
-  background-color: #fff;
   color: #47ff8c;
+  background-color: #fff;
   align-items: center;
   text-align: center;
 }

@@ -24,7 +24,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import WebImage from './website.svg';
 import YoutubePreview  from '../../assets/web-preview/youtube.webp';
-
+import  Data from './data';
 
 
 
@@ -122,54 +122,60 @@ function WebBulider() {
         </div>   
        <img src={WebImage} className="web-img" /> 
      </div>
-       <h3 className="web-intro-dis"> Choose your next website from these templates.</h3>
     {chooseTemplate && <div className="web-choose-template">
-  
+      <div className="web-choose-temp">
+       <h3 className="web-intro-dis"> Choose your next website from these templates.</h3>
+      </div>
       <div className="web-choose-grid"> 
-       <div className="web-preview-card"  >
-       <Tooltip title="Visit">
-         <img src={YoutubePreview} height="300"   className="img-preview-card"/>
-         </Tooltip>
-         <div className="card-text">
-          <h2> Video share </h2>
-          <h3  className="web-card-text-dis">Share your list of youtube videos in a cool format.</h3>
-          <Link to="/api" >
-        <Button style={{
+       
+       
+       {
+         Data.map(x => 
+          <div className="web-preview-card"  >
+          <Tooltip title="Visit">
+            <Link to={x.link} target="_blank">
+            <img src={x.src} height="300"   className="img-preview-card"/>
+            </Link>
+            </Tooltip>
+            <div className="card-text">
+             <h2>{x.name} </h2>
+             <h3  className="web-card-text-dis">{x.dis}</h3>
             
-            borderRadius: 25,
-            backgroundColor: "#47ff8c",
-            color: "#787c7a",
-            textDecoration: false,
-            marginRight: 5,
-
-            
-    
-        }} ><h3 className="intro-button-text">Use this</h3></Button> 
-        </Link>
-        <Link to="/webbuilder/">
-        <Button
-         style={{
-            
-            borderRadius: 25,
-            backgroundColor: "#787c7a",
-            color:"#47ff8c",
-            borderWidth: 5,
-            borderColor: "#787c7a",
-            textDecoration: false,
-            marginRight: 3,
-
-            
-    
-        }}
-        ><h3 className="intro-button-text">See format file</h3></Button> 
-        </Link>
-         </div>
-
+           <Button style={{
+               
+               borderRadius: 25,
+               backgroundColor: "#47ff8c",
+               color: "#787c7a",
+               textDecoration: false,
+               marginRight: 5,
+   
+               
+       
+           }} ><h3 className="intro-button-text">Use this</h3></Button> 
+          
+           <a href={x.exelLink} target="_blank">
+           <Button
+            style={{
+               
+               borderRadius: 25,
+               backgroundColor: "#787c7a",
+               color:"#47ff8c",
+               borderWidth: 5,
+               borderColor: "#787c7a",
+               textDecoration: false,
+               marginRight: 3,
+   
+               
+       
+           }}
+           ><h3 className="intro-button-text">See format file</h3></Button> 
+           </a>
+            </div>
+   
           </div>
-         <div className="web-preview-card">
-         oy </div>
-         <div className="web-preview-card">
-         oy </div>
+          
+          )
+       }
       </div>
 
     </div>}
