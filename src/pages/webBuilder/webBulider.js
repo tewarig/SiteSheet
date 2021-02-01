@@ -47,6 +47,19 @@ const styles =  makeStyles((theme) => ({
       fontWeight: 500,
     
   },
+  textField1: {
+    width: '65%',    
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: '7%',
+    color: '#47ff8c',
+    backgroundColor: '#f0f0f0',
+    margiTop: '5%',    
+    paddingBottom: 0,
+    marginTop: 0,
+    fontWeight: 500,
+  
+},
   
 }) );
 
@@ -55,7 +68,7 @@ function WebBulider() {
 
  
   var [url ,setUrl ] = useState(null);
-  var [apiUrl , setApiUrl] = useState(null);
+  var [webUrl , setwebUrl] = useState(null);
   var [chooseTemplate ,setChooseTemplate] = useState(true);
   const [templateUrl,settemplateUrl] = useState('');
 
@@ -95,7 +108,7 @@ function WebBulider() {
       }
       var uniqueID = url.slice(39,i);
       var temp = 'https://sitesheet.vercel.app/' + templateUrl +"/" + uniqueID  ;
-      setApiUrl(temp);
+      setwebUrl(temp);
 
 
 
@@ -109,7 +122,7 @@ function WebBulider() {
 
  const   copyCodeToClipboard = () => {
     
-  navigator.clipboard.writeText(apiUrl)
+  navigator.clipboard.writeText(webUrl)
     toast('Copied');
 
   }
@@ -201,10 +214,10 @@ function WebBulider() {
       !chooseTemplate && 
       <div className="api-back">
       <div className="api-details">
-      <h1 className="api-heading">Convert your Google sheet into a Website</h1>
+      <h1 className="api-heading">SiteShet <br/> Convert your Google sheet into a Website</h1>
       <div className="api-dis">
        
-        { !apiUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 
+        { !webUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 
    
     
    <TextField 
@@ -239,17 +252,17 @@ function WebBulider() {
    <ToastContainer />
 
   </div>
-  { apiUrl &&<> 
-    <span className="api-dis-text"> This is your website url share it with your friends.</span> 
+  { webUrl &&<> 
+    <span className="api-dis-text"> This is your website url .</span> <br/>
   <TextField    
     variant="outlined"
     fullWidth
-    defaultValue={apiUrl}
+    defaultValue={webUrl}
     style={{
       color: '#47ff8c',
 
     }}
-    className={classes.textField}
+    className={classes.textField1}
 
 
 
@@ -266,9 +279,24 @@ function WebBulider() {
      
 
 }}
-   onClick={copyCodeToClipboard} > <div className="api-button-text"> <FileCopyIcon /> </div></Button>
+   onClick={copyCodeToClipboard} > <div className="api-button-text"> <FileCopyIcon /> </div></Button> 
+ 
+ <a href={webUrl} target="_blank"  >
+  <Button 
+   style={{            
+    backgroundColor: "#787c7a",
+    color:"#47ff8c",     
+    borderColor: "#787c7a",
+    textDecoration: false,
+    marginLeft: '1%',
+  
+     
+
+}}
+   > <div className="api-button-text"> Visit </div></Button> </a>
    </>}
    </div>
+   
     </div>
 
     <img src={ApiImage}  className="api-image"/>
