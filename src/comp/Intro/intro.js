@@ -50,6 +50,7 @@ function Intro({}) {
     
         }} ><h3 className="intro-button-text">Convert into API</h3></Button> 
         </Link>
+        <Link to="/webbuilder/">
         <Button
          style={{
             
@@ -65,7 +66,9 @@ function Intro({}) {
     
         }}
         ><h3 className="intro-button-text">Convert into Website</h3></Button> 
+        </Link>
         </h3>
+      
         <h2 className="intro-h3">
            Convert Google Sheets into
         </h2>

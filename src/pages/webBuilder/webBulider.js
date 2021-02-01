@@ -1,5 +1,5 @@
 import React , {useState}from 'react';
-import './api.css';
+import './web.css';
 import { Button, TextField } from "@material-ui/core";
 import { makeStyles, fade } from '@material-ui/core/styles';
 
@@ -7,10 +7,9 @@ import { makeStyles, fade } from '@material-ui/core/styles';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import ApiImage from './api.svg';
 
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-
+import WebImage from './website.svg';
 
 const styles =  makeStyles((theme) => ({
   palette: {
@@ -33,7 +32,7 @@ const styles =  makeStyles((theme) => ({
   
 }) );
 
-function Api() {
+function WebBulider() {
   const classes = styles();
 
  
@@ -90,7 +89,7 @@ function Api() {
   return (
     <div className="api-back">
      <div className="api-details">
-     <h1 className="api-heading">Convert your Google sheet into a Api.</h1>
+     <h1 className="api-heading">Convert your Google sheet into a Website.</h1>
      <div className="api-dis">
    { !apiUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 
    
@@ -159,9 +158,9 @@ function Api() {
     </div>
     </div>
 
-    <img src={ApiImage}  className="api-image"/>
+    <img src={WebImage}  className="web-image"/>
     </div>
   );
 }
 
-export default Api;
+export default WebBulider;

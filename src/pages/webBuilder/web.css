@@ -1,0 +1,19 @@
+.web-image {
+  right: 0px;
+  bottom: 0px;
+  height: 90%;
+  width: 30%;
+  margin-top: 20%;
+  margin-left: 70%;
+}
+
+@media (max-width: 600px) {
+  .web-image {
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 150%;
+  }
+}

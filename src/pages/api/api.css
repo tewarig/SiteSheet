@@ -59,4 +59,15 @@
     display: flex;
     flex-direction: column;
   }
+  .api-dis {
+    color: #47ff8c;
+
+    margin-top: 10%;
+  }
+  .api-dis-text {
+    color: #787c7a;
+    margin-bottom: 5px;
+    margin-top: 15%;
+    font-size: 17px;
+  }
 }
