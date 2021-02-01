@@ -48,7 +48,7 @@ const styles =  makeStyles((theme) => ({
     
   },
   textField1: {
-    width: '65%',    
+    width: '50%',    
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: '7%',

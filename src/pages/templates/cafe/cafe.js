@@ -64,9 +64,6 @@ export  default function Cafe(){
     return (
       < >
       <div>
-      <img className="hero-img" src={Coffe}  width="60%" height="100%"/>
-      {clearText(cafeName)} <br/>  
-      {clearText(cafeTagline)}
         </div>
     
      <div className="social-bar">
@@ -94,10 +91,20 @@ export  default function Cafe(){
       </a>
       
       </div>
+        
       <div className="bottom">
           <div className="bar-line"></div>
       </div>
-     </>
+      <div className="cafe-wrapper">
+        <div>
+      <h1 className="cafe-name-text"> {clearText(cafeName)} </h1> <br/>  
+       <h1 className="cafe-dis-text">{clearText(cafeTagline)} </h1>
+       </div>
+      <img className="hero-img" src={Coffe}  width="60%" height="100%"/>
+      </div>
+        
+          <div className="bar-line"></div>
+         </>
     );
     }
 };
