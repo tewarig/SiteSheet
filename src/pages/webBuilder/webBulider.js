@@ -23,7 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 import WebImage from './website.svg';
-import YoutubePreview  from '../../assets/web-preview/youtube.webp';
+import ApiImage from '../api/api.svg';
 import  Data from './data';
 
 
@@ -57,11 +57,23 @@ function WebBulider() {
   var [url ,setUrl ] = useState(null);
   var [apiUrl , setApiUrl] = useState(null);
   var [chooseTemplate ,setChooseTemplate] = useState(true);
+  const [templateUrl,settemplateUrl] = useState('');
+
+  var changeTemplateUrl = (text) => {
+    settemplateUrl(text);
+    setChooseTemplate(!chooseTemplate); 
+    console.log(templateUrl);
+  }
+
+
   const getUrl = (e)  => {
     var data =  e.target.value;
     setUrl(data);
    
   }
+
+
+  
 
   const checkUrl = () => {
    if(url == null)
@@ -74,7 +86,7 @@ function WebBulider() {
 
     if(yo ==='https://docs.google.com/spreadsheets/d/')
     {
-      toast('Api is ready');
+      toast('Website is ready');
       console.log(yo);
       var i = 40;
       while(url[i] !== '/')
@@ -82,8 +94,7 @@ function WebBulider() {
         i++;
       }
       var uniqueID = url.slice(39,i);
-      console.log(uniqueID);
-      var temp = 'https://sitesheet.vercel.app' + uniqueID + '/od6/public/basic?alt=json ';
+      var temp = 'https://sitesheet.vercel.app/' + templateUrl +"/" + uniqueID  ;
       setApiUrl(temp);
 
 
@@ -106,7 +117,7 @@ function WebBulider() {
 
   return (
   <div>
-    <div className="web-intro">
+   {chooseTemplate && <div className="web-intro">
        <div className="web-intro-heading"> 
        <h1 className="web-h1-yo">  SiteSheet</h1> <br/> 
         
@@ -122,6 +133,8 @@ function WebBulider() {
         </div>   
        <img src={WebImage} className="web-img" /> 
      </div>
+
+  } 
     {chooseTemplate && <div className="web-choose-template">
       <div className="web-choose-temp">
        <h3 className="web-intro-dis"> Choose your next website from these templates.</h3>
@@ -151,7 +164,12 @@ function WebBulider() {
    
                
        
-           }} ><h3 className="intro-button-text">Use this</h3></Button> 
+           }}
+           onClick={
+            ()=> (changeTemplateUrl(x.urlSlag))
+           }
+           
+            ><h3 className="intro-button-text">Use this</h3></Button> 
           
            <a href={x.exelLink} target="_blank">
            <Button
@@ -180,9 +198,82 @@ function WebBulider() {
 
     </div>}
     {
-      !chooseTemplate && <>
-      yo this is url window.
-      </>
+      !chooseTemplate && 
+      <div className="api-back">
+      <div className="api-details">
+      <h1 className="api-heading">Convert your Google sheet into a Website</h1>
+      <div className="api-dis">
+       
+        { !apiUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 
+   
+    
+   <TextField 
+    label="Enter Url"
+    variant="outlined"
+    fullWidth
+    onChange={getUrl}
+    style={{
+      color: '#47ff8c',
+
+    }}
+    className={classes.textField}
+
+
+
+   >
+     </TextField>
+   <Button 
+   style={{            
+    backgroundColor: "#787c7a",
+    color:"#47ff8c",     
+    borderColor: "#787c7a",
+    textDecoration: false,
+    marginLeft: '1%',
+  
+     
+
+}}
+   onClick={checkUrl} > <div className="api-button-text">GO</div></Button>
+  </>
+}  <div>
+   <ToastContainer />
+
+  </div>
+  { apiUrl &&<> 
+    <span className="api-dis-text"> This is your website url share it with your friends.</span> 
+  <TextField    
+    variant="outlined"
+    fullWidth
+    defaultValue={apiUrl}
+    style={{
+      color: '#47ff8c',
+
+    }}
+    className={classes.textField}
+
+
+
+   />
+  
+  <Button 
+   style={{            
+    backgroundColor: "#787c7a",
+    color:"#47ff8c",     
+    borderColor: "#787c7a",
+    textDecoration: false,
+    marginLeft: '1%',
+  
+     
+
+}}
+   onClick={copyCodeToClipboard} > <div className="api-button-text"> <FileCopyIcon /> </div></Button>
+   </>}
+   </div>
+    </div>
+
+    <img src={ApiImage}  className="api-image"/>
+    </div>
+
     }
   </div>
   );
