@@ -60,6 +60,10 @@ export  default function Cafe(){
     }else{
      var cafeName = data["feed"].entry[0]["content"]['$t'];
      var cafeTagline = data["feed"].entry[1]["content"]['$t'];
+     var cafeNumber = data["feed"].entry[2]["content"]["$t"];
+     var newNumber = "tel:" + clearText(cafeNumber);
+     var cafeFacebook = data["feed"].entry[3]["content"]["$t"];
+     var cafeTwitter = data["feed"].entry[4]["content"]["$t"];
 
     return (
       < >
@@ -69,13 +73,13 @@ export  default function Cafe(){
      <div className="social-bar">
        <div className="bar-line">
        </div>
-      <a>
+      < a href={newNumber}>
       <Button>
        <PhoneIcon fontSize="large" />
      
       </Button>
       </a>
-      <a>
+      <a href={clearText(cafeFacebook)}>
       <Button>
           
        <FacebookIcon fontSize="large" />
@@ -83,7 +87,7 @@ export  default function Cafe(){
       </Button>
       </a>
        
-      <a>
+      <a href={clearText(cafeTwitter)}>
       <Button>
        <TwitterIcon fontSize="large" />
      
@@ -99,11 +103,26 @@ export  default function Cafe(){
         <div>
       <h1 className="cafe-name-text"> {clearText(cafeName)} </h1> <br/>  
        <h1 className="cafe-dis-text">{clearText(cafeTagline)} </h1>
+     
        </div>
       <img className="hero-img" src={Coffe}  width="60%" height="100%"/>
       </div>
         
           <div className="bar-line"></div>
+        <div className="cafe-card-Grid">
+
+        <div className="cafe-card">
+          yyo
+          </div>
+          <div className="cafe-card">
+          yyo
+          </div>
+          <div className="cafe-card">
+          yyo
+          </div>
+        </div>
+   
+      
          </>
     );
     }
