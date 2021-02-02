@@ -10,7 +10,9 @@ import './cafe.css';
 import Coffe from '../../../assets/coffee.svg';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PhoneIcon from '@material-ui/icons/Phone';
-
+import MotorcycleIcon from '@material-ui/icons/Motorcycle';
+import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
+import WatchLaterIcon from '@material-ui/icons/WatchLater';
 
 import {
     BrowserRouter as Router,   
@@ -112,13 +114,34 @@ export  default function Cafe(){
         <div className="cafe-card-Grid">
 
         <div className="cafe-card">
-          yyo
+            <Button className="cafe-card-bg">
+          <div className="cafe-details">
+        <MotorcycleIcon fontSize="large" className="card-icon"  />
+        <h1 > instant delivery  </h1>
+
+          </div>
+          </Button>
           </div>
           <div className="cafe-card">
-          yyo
+          <Button className="cafe-card-bg">
+          <div className="cafe-details">
+        <EmojiFoodBeverageIcon fontSize="large" className="card-icon"  />
+        <h1 > Freshely Prepared </h1>
+
           </div>
-          <div className="cafe-card">
-          yyo
+          </Button>
+
+          </div>
+           <div className="cafe-card">
+           <Button className="cafe-card-bg">
+          <div className="cafe-details">
+        <WatchLaterIcon fontSize="large" className="card-icon"  />
+        <h1 > 24 x 7 service</h1>
+
+          </div>
+          </Button>
+
+
           </div>
         </div>
    
