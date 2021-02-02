@@ -23,6 +23,10 @@
 
   border-radius: 50px;
 }
+.bar-gap {
+  margin-top: 5%;
+  /* margin-bottom: 3%; */
+}
 .bottom {
   bottom: 1;
   position: absolute;
@@ -74,6 +78,23 @@
 .cafe-details {
   color: #ff5678;
 }
+.cafe-last-div {
+  align-items: center;
+  text-align: center;
+  background-color: #ff5678;
+  height: 200px;
+}
+.cafe-last-text {
+  /* margin-top: 0px; */
+  margin-top: 25%;
+  margin-block-start: 0em;
+  margin-block-end: 0px;
+  font-weight: 300;
+  font-size: 40px;
+}
+.cafe-h3 {
+  margin-block-start: 0px;
+}
 
 @media (max-width: 600px) {
   .cafe-wrapper {
@@ -86,5 +107,13 @@
     width: 100%;
     height: 50%;
     margin-left: 0%;
+  }
+  .cafe-last-text {
+    /* margin-top: 0px; */
+    margin-top: 25%;
+    margin-block-start: 0em;
+    margin-block-end: 0px;
+    font-weight: 300;
+    font-size: 20px;
   }
 }

@@ -13,6 +13,8 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+
 
 import {
     BrowserRouter as Router,   
@@ -66,6 +68,8 @@ export  default function Cafe(){
      var newNumber = "tel:" + clearText(cafeNumber);
      var cafeFacebook = data["feed"].entry[3]["content"]["$t"];
      var cafeTwitter = data["feed"].entry[4]["content"]["$t"];
+     var cafeAddress = data["feed"].entry[5]["content"]["$t"];
+
 
     return (
       < >
@@ -144,7 +148,30 @@ export  default function Cafe(){
 
           </div>
         </div>
-   
+        <div className="bar-line bar-gap"></div>
+     
+        <div className="cafe-last-div">
+          <br/>
+          <br/><br/>
+          <div className="cafe-last-text">
+        < a href={newNumber}>
+      <Button>
+       <PhoneIcon fontSize="large" />
+     
+      </Button>
+      </a>
+            
+            Order Now!!! </div>
+            
+              <LocationOnIcon/> 
+              
+              
+            <h3 className="cafe-h3"> 
+              {clearText(cafeAddress)}</h3>
+              
+              
+
+         </div>
       
          </>
     );
