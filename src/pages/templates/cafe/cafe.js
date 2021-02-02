@@ -69,6 +69,11 @@ export  default function Cafe(){
      var cafeFacebook = data["feed"].entry[3]["content"]["$t"];
      var cafeTwitter = data["feed"].entry[4]["content"]["$t"];
      var cafeAddress = data["feed"].entry[5]["content"]["$t"];
+     var header1 = data["feed"].entry[6]["content"]["$t"];
+     var header2 = data["feed"].entry[7]["content"]["$t"];
+     var header3 = data["feed"].entry[8]["content"]["$t"];
+
+
 
 
     return (
@@ -121,7 +126,7 @@ export  default function Cafe(){
             <Button className="cafe-card-bg">
           <div className="cafe-details">
         <MotorcycleIcon fontSize="large" className="card-icon"  />
-        <h1 > instant delivery  </h1>
+        <h1 > {clearText(header1)}  </h1>
 
           </div>
           </Button>
@@ -130,7 +135,7 @@ export  default function Cafe(){
           <Button className="cafe-card-bg">
           <div className="cafe-details">
         <EmojiFoodBeverageIcon fontSize="large" className="card-icon"  />
-        <h1 > Freshely Prepared </h1>
+        <h1 > {clearText(header2)} </h1>
 
           </div>
           </Button>
@@ -140,7 +145,7 @@ export  default function Cafe(){
            <Button className="cafe-card-bg">
           <div className="cafe-details">
         <WatchLaterIcon fontSize="large" className="card-icon"  />
-        <h1 > 24 x 7 service</h1>
+        <h1 > {clearText(header3)}</h1>
 
           </div>
           </Button>
