@@ -168,11 +168,11 @@ export  default function Cafe(){
             
             Order Now!!! </div>
             
-              <LocationOnIcon/> 
+              <LocationOnIcon/>  <br/>
               
               
-            <h3 className="cafe-h3"> 
-              {clearText(cafeAddress)}</h3>
+            <span className="cafe-h3"> 
+              {clearText(cafeAddress)}</span>
               
               
 

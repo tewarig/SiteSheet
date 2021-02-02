@@ -1,5 +1,6 @@
 import YoutubePreview  from '../../assets/web-preview/youtube.webp';
 import RandomImage from '../../assets/web-preview/random.webp';
+import Cafe from '../../assets/web-preview/cafe.webp';
 
 
 const  Data = [
@@ -21,12 +22,12 @@ const  Data = [
         urlSlag: "random",
     },{
         id: 2,
-        src: '../../assets/web-preview/youtube.webp',
-        name: "Youtube Share",
-        dis: "Share your list of youtube videos in a cool format",
-        link: "youtube/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc",
-        exelLink: "https://docs.google.com/spreadsheets/d/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc/edit",
-        urlSlag: "youtube",
+        src: Cafe,
+        name: "Cafe Site",
+        dis: "Make a website for your cafe.",
+        link: "/cafe/1x4JYGlzvRYmFI9D-iGo24qNiqlMXrc1-pOtFSkxWjC4",
+        exelLink: "https://docs.google.com/spreadsheets/d/1x4JYGlzvRYmFI9D-iGo24qNiqlMXrc1-pOtFSkxWjC4/edit#gid=0",
+        urlSlag: "cafe",
     },
     
 ];
