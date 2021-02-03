@@ -1,6 +1,7 @@
 import YoutubePreview  from '../../assets/web-preview/youtube.webp';
 import RandomImage from '../../assets/web-preview/random.webp';
 import Cafe from '../../assets/web-preview/cafe.webp';
+import SheetImage from '../../assets/web-preview/sheetLink.webp';
 
 
 const  Data = [
@@ -28,7 +29,15 @@ const  Data = [
         link: "/cafe/1x4JYGlzvRYmFI9D-iGo24qNiqlMXrc1-pOtFSkxWjC4",
         exelLink: "https://docs.google.com/spreadsheets/d/1x4JYGlzvRYmFI9D-iGo24qNiqlMXrc1-pOtFSkxWjC4/edit#gid=0",
         urlSlag: "cafe",
-    },
+    },{
+        id: 3,
+        src: SheetImage,
+        name: "Sheet Link",
+        dis: "List all your Social Link  with Google Sheet",
+        link: "/connect/1fMBs73r8iA0BsamfHFEKlCTx2h9b9R9xtu3jF5RJZao",
+        exelLink: "https://docs.google.com/spreadsheets/d/1fMBs73r8iA0BsamfHFEKlCTx2h9b9R9xtu3jF5RJZao/edit#gid=0",
+        urlSlag: "connect",
+    }
     
 ];
 
