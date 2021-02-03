@@ -15,6 +15,7 @@ import Random from "./pages/templates/random/random";
 import Cafe from "./pages/templates/cafe/cafe";
 import LandingPage from "./pages/templates/landingPage/landingPage";
 import WebBuilder from './pages/webBuilder/webBulider';
+import Connect from './pages/templates/connect/connect' ;
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/cafe/:id" children={<Cafe />} />
             <Route path="/landinPage/:id" children={<LandingPage />} />
             <Route path="/webbuilder/" children={<WebBuilder/>} />
+            <Route path="/connect/:id" children={< Connect />}  />
           </Switch>
         </div>
       </Router>
