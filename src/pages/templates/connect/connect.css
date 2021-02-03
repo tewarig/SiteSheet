@@ -29,3 +29,30 @@
   display: flex;
   flex-direction: column;
 }
+.connect-button-text {
+  margin-left: 10%;
+}
+.connect-button {
+}
+.connect-button-twitter:hover {
+  color: #1da1f2;
+}
+.connect-button-Facebook:hover {
+  color: #4267b2;
+}
+.connect-button-LinkedIn:hover {
+  color: #2867b2;
+}
+.connect-button-Github:hover {
+  color: #333;
+}
+.connect-button-IG:hover {
+  color: #e1306c;
+}
+.connect-button-youtube:hover {
+  color: #e13;
+}
+.connect-btn {
+  margin-top: 4%;
+  margin-bottom: 5%;
+}

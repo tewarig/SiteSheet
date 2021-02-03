@@ -2,7 +2,6 @@ import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
 import  { Button }from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
 
 
 import './connect.css';
@@ -12,6 +11,9 @@ import Coffe from '../../../assets/coffee.svg';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import {
     BrowserRouter as Router,   
@@ -65,6 +67,9 @@ export  default function Connect(){
      var userFacebook = data["feed"].entry[4]["content"]["$t"];
      var userLinkedIn = data["feed"].entry[5]["content"]["$t"];
      var userGithub = data["feed"].entry[6]["content"]["$t"];
+     var userIG = data["feed"].entry[7]["content"]["$t"];
+     var userYoutube = data["feed"].entry[8]["content"]["$t"];
+
 
 
 
@@ -85,30 +90,61 @@ export  default function Connect(){
         <div className="connect-social-icons">
         {clearText(userTwitter)  && <>  
             <a href={clearText(userTwitter)}  target="_blank" >
-       <Button>
+       <Button className="connect-button-twitter connect-btn">
            <TwitterIcon/>
-          Twitter 
+          <span className="connect-button-text"> Twitter  </span>
+
          </Button>
          </a>
            </>}
-       {clearText(userFacebook) && <> {clearText(userFacebook)} </>  }
+       {clearText(userFacebook) && <> 
+        <a href={clearText(userFacebook)}  target="_blank" >
+       <Button className="connect-button-Facebook connect-btn">
+           <FacebookIcon/>
+           <span className="connect-button-text">  Facebook </span>
+         </Button>
+         </a>
+       
+       </>  }
        {clearText(userLinkedIn) && <> 
         <a href={clearText(userLinkedIn)}  target="_blank" >
-       <Button>
+       <Button className="connect-button-LinkedIn connect-btn" >
       <LinkedInIcon/>
-        LinkedIn
+      <span className="connect-button-text">    LinkedIn </span>
        </Button>
             </a> 
         </>}
        {clearText(userGithub) && <> 
        <a href={clearText(userGithub)}  target="_blank" >
-       <Button>
+       <Button className="connect-button-Github connect-btn">
            
-           < GitHubIcon />  <h3>  Github </h3>
+           < GitHubIcon />   
+           <span className="connect-button-text"> Github </span>
            
        </Button>
             </a> 
             </>}
+            {clearText(userIG) && <> 
+       <a href={clearText(userIG)}  target="_blank" >
+       <Button className="connect-button-IG connect-btn">
+           
+           < InstagramIcon/>   
+           <span className="connect-button-text"> Instagram </span>
+           
+       </Button>
+            </a> 
+            </>}
+            {clearText(userYoutube) && <> 
+       <a href={clearText(userYoutube)}  target="_blank" >
+       <Button className="connect-button-youtube connect-btn">
+           
+           < YouTubeIcon/>   
+           <span className="connect-button-text"> Youtube </span>
+           
+       </Button>
+            </a> 
+            </>}
+
 
 
           </div>
