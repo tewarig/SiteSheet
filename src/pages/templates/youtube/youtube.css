@@ -44,6 +44,11 @@
   gap: 5rem;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
+.youtube-card {
+  height: 490px;
+  background-color: #bee9e4;
+  border-radius: 25px;
+}
 
 .videoTitle {
   margin-left: 3%;

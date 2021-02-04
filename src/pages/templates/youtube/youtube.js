@@ -94,7 +94,7 @@ export  default function Youtube(){
     mainData.map(
         x =>
        
-        <div className="card" key={x["content"].$t}>
+        <div className="youtube-card" key={x["content"].$t}>
     <ReactPlayer url={clearLink(x["content"].$t)} controls={true} className="videoPlayer" width="100%"/>
     <h3 className="videoTitle"> {x["title"].$t}</h3>
 
