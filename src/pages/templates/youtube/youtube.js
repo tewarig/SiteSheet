@@ -1,7 +1,6 @@
 import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
-import {Button , Card} from "@material-ui/core";
 import ReactPlayer from 'react-player'
 
 
@@ -13,9 +12,7 @@ import YoutubeImage from '../../../assets/youtube.png' ;
 
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
+   
     useParams
   } from "react-router-dom";
 

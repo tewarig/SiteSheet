@@ -5,7 +5,6 @@ import  { Button }from '@material-ui/core';
 
 
 import './connect.css';
-import Coffe from '../../../assets/coffee.svg';
 
 
 import GitHubIcon from '@material-ui/icons/GitHub';
