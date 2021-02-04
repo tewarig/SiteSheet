@@ -79,7 +79,7 @@ h1 {
   border-radius: 20px;
   border: 2px solid #8f8f8f;
   color: #47ff8c;
-  background-color: #fff;
+  background-color: rgb(235, 255, 255);
   align-items: center;
   text-align: center;
 }

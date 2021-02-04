@@ -14,6 +14,7 @@ import Cafe from "./pages/templates/cafe/cafe";
 import LandingPage from "./pages/templates/landingPage/landingPage";
 import WebBuilder from './pages/webBuilder/webBulider';
 import Connect from './pages/templates/connect/connect' ;
+import Me from './pages/templates/me/me';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/landinPage/:id" children={<LandingPage />} />
             <Route path="/webbuilder/" children={<WebBuilder/>} />
             <Route path="/connect/:id" children={< Connect />}  />
+            <Route path="/me/:id"  children={<Me/>} />
           </Switch>
         </div>
       </Router>

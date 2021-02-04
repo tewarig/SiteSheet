@@ -279,8 +279,8 @@ function WebBulider() {
   
      
 
-}}
-   onClick={checkUrl} > <div className="api-button-text">GO</div></Button>
+  }}
+  onClick={checkUrl} > <div className="api-button-text">GO</div></Button>
   </>
 }  <div>
    <ToastContainer />
