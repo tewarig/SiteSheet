@@ -1,7 +1,6 @@
 import React , {useState ,useEffect} from "react";
 import Axios from 'axios';
 import Loading from '../../../comp/loading/loading';
-import ReactPlayer from 'react-player'
 import  { Button }from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
@@ -20,7 +19,6 @@ import {
     BrowserRouter as Router,   
     useParams
   } from "react-router-dom";
-import { PhoneInTalk } from "@material-ui/icons";
 
 
 export  default function Cafe(){

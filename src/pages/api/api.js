@@ -1,7 +1,7 @@
 import React , {useState}from 'react';
 import './api.css';
 import { Button, TextField } from "@material-ui/core";
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -26,7 +26,6 @@ const styles =  makeStyles((theme) => ({
       backgroundColor: '#f0f0f0',
       margiTop: '5%',    
       paddingBottom: 0,
-      marginTop: 0,
       fontWeight: 500,
     
   },
@@ -159,7 +158,7 @@ function Api() {
     </div>
     </div>
 
-    <img src={ApiImage}  className="api-image"/>
+    <img src={ApiImage} alt="api-image" className="api-image"/>
     </div>
   );
 }

@@ -71,11 +71,12 @@ function WebBulider() {
   var [webUrl , setwebUrl] = useState(null);
   var [chooseTemplate ,setChooseTemplate] = useState(true);
   const [templateUrl,settemplateUrl] = useState('');
+  var [ok,setOk] = useState(false);
 
   var changeTemplateUrl = (text) => {
     settemplateUrl(text);
     setChooseTemplate(!chooseTemplate); 
-    console.log(templateUrl);
+    // console.og(templateUrl);
   }
 
 
@@ -100,7 +101,6 @@ function WebBulider() {
     if(yo ==='https://docs.google.com/spreadsheets/d/')
     {
       toast('Website is ready');
-      console.log(yo);
       var i = 40;
       while(url[i] !== '/')
       {
@@ -130,7 +130,7 @@ function WebBulider() {
 
   return (
   <div>
-   {chooseTemplate && <div className="web-intro">
+   {!ok && <div className="web-intro">
        <div className="web-intro-heading"> 
        <h1 className="web-h1-yo">  SiteSheet</h1> <br/> 
         
@@ -143,13 +143,47 @@ function WebBulider() {
           <li> Enter you google sheet url</li>
           <li> Get Link to your site in a snap.</li>         
          </ul>
+         <br/>
+
+        <Button style={{
+            
+            borderRadius: 25,
+            backgroundColor: "#47ff8c",
+            color: "#787c7a",
+            textDecoration: false,
+            marginRight: 5,
+
+            
+    
+        }}
+        onClick={ ()=>{setOk(!ok)}}
+        ><h3 className="intro-button-text">Ok let's Start</h3></Button> 
+       
+        <Link to="/webbuilder/">
+        <Button
+         style={{
+            
+            borderRadius: 25,
+            backgroundColor: "#787c7a",
+            color:"#47ff8c",
+            borderWidth: 5,
+            borderColor: "#787c7a",
+            textDecoration: false,
+            marginRight: 3,
+
+            
+    
+        }}
+        ><h3 className="intro-button-text"> Tell me more.</h3></Button> 
+        </Link>
         </div>   
        <img src={WebImage} className="web-img" /> 
      </div>
 
   } 
-    {chooseTemplate && <div className="web-choose-template">
+    {(chooseTemplate&&ok) && <div className="web-choose-template">
       <div className="web-choose-temp">
+        <h1 className="web-intro-main"> Site Sheet </h1>
        <h3 className="web-intro-dis"> Choose your next website from these templates.</h3>
       </div>
       <div className="web-choose-grid"> 
@@ -214,7 +248,7 @@ function WebBulider() {
       !chooseTemplate && 
       <div className="api-back">
       <div className="api-details">
-      <h1 className="api-heading">SiteShet <br/> Convert your Google sheet into a Website</h1>
+      <h1 className="api-heading">SiteSheet <br/> Convert your Google sheet into a Website</h1>
       <div className="api-dis">
        
         { !webUrl && <> <span className="api-dis-text"> Make sure you have publised you google sheet to web ,then share your google sheet url.</span> 

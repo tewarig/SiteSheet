@@ -20,7 +20,7 @@ function Intro({}) {
           
 
          </div>
-        <img src={Exel} className="intro-exelImg"></img>
+        <img src={Exel} alt="intro-exel-image" className="intro-exelImg"></img>
         
 
         <div className="intro-Buttons">
