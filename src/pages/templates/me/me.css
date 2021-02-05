@@ -1,9 +1,16 @@
 .me-name {
-  margin-top: 10%;
 }
 .me-container {
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.me-particle-box {
+  height: 100;
+}
+
+.me-image {
+  border-radius: 50%;
+  margin-top: 15%;
 }
