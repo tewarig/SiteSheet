@@ -1,0 +1,9 @@
+.me-name {
+  margin-top: 10%;
+}
+.me-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

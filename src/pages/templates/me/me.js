@@ -4,7 +4,7 @@ import Loading from '../../../comp/loading/loading';
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 import Particles from 'react-particles-js';
-
+import ParticleComponent from './particle' ;
 
 
 
@@ -70,25 +70,32 @@ export  default function Me(){
 
       return (
      <>
-     <Particles
-    params={{
-	    "particles": {
-	        "number": {
-	            "value": 50
-	        },
-	        "size": {
-	            "value": 3
-	        }
-	    },
-	    "interactivity": {
-	        "events": {
-	            "onhover": {
-	                "enable": true,
-	                "mode": "repulse"
-	            }
-	        }
-	    }
-	}} />
+      <Router>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%"
+        }}
+      >
+        <ParticleComponent />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%"
+          }}
+        >
+            <div  className="me-container">
+          <h1 className="me-name">User Name</h1>
+          </div>
+        </div>
+      </div>
+    </Router>
 
      </>
       
