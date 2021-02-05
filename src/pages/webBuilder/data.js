@@ -2,18 +2,20 @@ import YoutubePreview  from '../../assets/web-preview/youtube.webp';
 import RandomImage from '../../assets/web-preview/random.webp';
 import Cafe from '../../assets/web-preview/cafe.webp';
 import SheetImage from '../../assets/web-preview/sheetLink.webp';
+import Me from '../../assets/web-preview/me.webp' ;
 
 
 const  Data = [
     {
         id: 0,
-        src: YoutubePreview,
-        name: "Youtube Share",
-        dis: "Share your list of youtube videos in a cool format",
-        link: "/youtube/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc",
-        exelLink: "https://docs.google.com/spreadsheets/d/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc/edit",
-        urlSlag: "youtube",
-    },{
+        src: Me,
+        name: "Simple Portfolio",
+        dis: "Make your own  Personal Landing Page",
+        link: "/me/1DW-wXUQnugLow2ErcfFhBu9P2i7CsVIHu-DPyWrOZgM",
+        exelLink: "https://docs.google.com/spreadsheets/d/1DW-wXUQnugLow2ErcfFhBu9P2i7CsVIHu-DPyWrOZgM/edit#gid=0",
+        urlSlag: "me",
+    },
+   {
         id: 1,
         src: RandomImage,
         name: "Random Winner",
@@ -37,6 +39,14 @@ const  Data = [
         link: "/connect/1fMBs73r8iA0BsamfHFEKlCTx2h9b9R9xtu3jF5RJZao",
         exelLink: "https://docs.google.com/spreadsheets/d/1fMBs73r8iA0BsamfHFEKlCTx2h9b9R9xtu3jF5RJZao/edit#gid=0",
         urlSlag: "connect",
+    }, {
+        id: 4,
+        src: YoutubePreview,
+        name: "Youtube Share",
+        dis: "Share your list of youtube videos in a cool format",
+        link: "/youtube/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc",
+        exelLink: "https://docs.google.com/spreadsheets/d/17RSJzuUES3mWUuqD_7QTD-aC06TbQbFGl4Ih_Ulknyc/edit",
+        urlSlag: "youtube",
     }
     
 ];
