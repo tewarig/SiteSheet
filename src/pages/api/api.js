@@ -58,14 +58,14 @@ function Api() {
     if(yo ==='https://docs.google.com/spreadsheets/d/')
     {
       toast('Api is ready');
-      console.log(yo);
+      // console.log(yo);
       var i = 40;
       while(url[i] !== '/')
       {
         i++;
       }
       var uniqueID = url.slice(39,i);
-      console.log(uniqueID);
+      // console.log(uniqueID);
       var temp = 'https://spreadsheets.google.com/feeds/list/' + uniqueID + '/od6/public/basic?alt=json ';
       setApiUrl(temp);
 
