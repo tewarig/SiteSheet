@@ -24,4 +24,4 @@ Converting a google sheet into a website
 - code download
 - support for custom domain
 
-## This project is a part of Hashnode + Vercel Hackathon
+## Winner of  Hashnode + Vercel Hackathon
